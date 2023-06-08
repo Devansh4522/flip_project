@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style_small.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @media screen and (max-width:600px) {
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                height: 95px;
+                width: 100vw;
+                min-height: 95px;
+                background-color: black;
+                position: sticky;
+                top: 0%;
+                z-index: 100;
+                /* position:relative; */
+            }
+
+            nav {
+           
+                display: flex;
+                align-items: center;
+                position: relative;
+
+
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                margin-left: 13px;
+                margin-right: 4px;
+                flex-direction: column;
+                padding: 0px 4px 0px 60px;
+            }
+
+            .explore {
+                color: white;
+            }
+
+            .plus {
+                color: yellow;
+                padding-left: 2px;
+            }
+
+            .tag {
+                display: flex;
+                width: fit-content;
+                font-style: italic;
+                font-size: 13px;
+            }
+
+
+
+            nav ul {
+                height: 56px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-left: 10px;
+
+            }
+
+            nav ul li {
+                list-style: none;
+                padding: 28px;
+
+            }
+
+            nav ul li a {
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: none;
+                font-size: 16px;
+                /* font-weight: bold; */
+
+            }
+
+            .search {
+                height: 32px;
+                width: calc(521.76px + 42.32px);
+                position:absolute;
+                bottom:10px;
+                
+            }
+
+            .login {
+                height: 30px;
+                color: #2874f0;
+                font-size: 16px;
+                /* font-weight: bold; */
+                background-color: white;
+                margin-left: 48px;
+                border-radius: 3px;
+                padding: 5px 40px 5px 40px;
+                border: 0px;
+            }
+
+            .container {
+                height: 1530px;
+                min-height: 1366px;
+                background-color: rgb(226, 226, 226);
+            }
+
+
+
+
+            .section {
+                height: 112.2px;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .sectionIn {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 1280px;
+            }
+
+            .sectionIn div {
+                margin: 0px 18px;
+                text-align: center;
+            }
+
+
+            .itemlist1 {
+                height: 361.2px;
+                width: 99vw;
+                background-color: white;
+                margin: auto;
+                margin-top: 10px;
+                display: flex;
+
+            }
+
+            .heading1 {
+                height: 361.2px;
+                min-width: 232px;
+                background-color: aqua;
+
+            }
+
+
+
+
+            .cardlist {
+                height: 361.2px;
+                min-width: 1286px;
+                background-color: blue;
+                display: flex;
+                overflow-x: auto;
+
+
+            }
+
+            .card {
+                height: 361.2px;
+                min-width: 232px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+
+            }
+
+            .image {
+                height: 234.78px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .card img {
+                padding: 25px 4px;
+            }
+
+            .description {
+                text-align: center;
+                position: absolute;
+                top: 65%;
+            }
+
+            .name {
+                margin-top: 4px;
+            }
+
+            .price,
+            .brand {
+                margin-top: 12px;
+            }
+
+            .price {
+                color: rgb(81, 132, 5);
+            }
+
+            .brand {
+                color: gray;
+            }
+
+            .itemlist2 {
+                height: 361.2px;
+                width: 99vw;
+                background-color: white;
+                margin: auto;
+                margin-top: 10px;
+                display: flex;
+
+            }
+
+            .heading2 {
+                height: 361.2px;
+                min-width: 232px;
+                background-color: aqua;
+
+            }
+
+
+
+            .itemlist3 {
+                height: 361.2px;
+                width: 99vw;
+                background-color: white;
+                margin: auto;
+                margin-top: 10px;
+                display: flex;
+
+            }
+
+            .heading3 {
+                height: 361.2px;
+                min-width: 232px;
+                background-color: aqua;
+
+            }
+
+
+            footer {
+                background-color: #001332;
+                height: 346.8px;
+                color: white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .firstpart {
+                display: flex;
+                padding-top: 40px;
+                margin: 0px 58px;
+                justify-content: center;
+                position: relative;
+            }
+
+            .footerheading {
+                height: 240px;
+                width: 209.6px;
+                font-size: 12px;
+            }
+
+            .footerheading ul {
+                list-style: none;
+                line-height: 8px;
+            }
+
+
+
+            .footerheading ul li {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .footerheading2 ul li {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .h {
+                color: #878787;
+                line-height: 18px;
+            }
+
+            .fheading {
+                color: #878787;
+                padding-bottom: 15px;
+
+            }
+
+            .footerheading2 {
+                height: 240px;
+                width: 192px;
+                margin: 0px auto;
+                font-size: 12px;
+            }
+
+            .content {
+                font-size: 12px;
+                line-height: 18px;
+            }
+
+            .line {
+                height: 1px;
+                width: 100vw;
+                background-color: #454d5e;
+                position: absolute;
+                top: 77.5%;
+            }
+
+            .vline {
+                height: 2px;
+                width: 170px;
+                background-color: #454d5e;
+                rotate: 90deg;
+                position: absolute;
+                top: 45%;
+                left: 54%;
+            }
+
+            .secondpart {
+                height: 300px;
+                width: auto;
+                display: flex;
+            }
+
+
+        }
+    </style>
+    <style>
+        .slider {
+            height: 280px;
+            width: 99vw;
+            background-image: url(img/lake.jpg);
+            background-position: center;
+            margin: auto;
+            margin-top: 16px;
+            background-size: 99vw;
+            background-repeat: no-repeat;
+            animation: slide 9s infinite linear;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .larrow {
+            height: 104px;
+            width: 47px;
+            background-color: white;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rarrow {
+            height: 104px;
+            width: 47px;
+            background-color: white;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rarrow img {
+            rotate: 180deg;
+        }
+
+        @keyframes slide {
+            0% {
+                background-image: url(img/lake.jpg);
+            }
+
+            33% {
+                background-image: url(img/flight.jpg);
+            }
+
+            66% {
+                background-image: url(img/phone.jpg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/flogo.png" alt="" width="75px">
+                <div class="tag">
+                    <p class="explore">Explore </p>
+                    <p class="plus"> Plus</p>
+                </div>
+            </div>
+
+            <input class="search" type="text" placeholder="    Search for products, brands and more">
+
+            <button class="login">Login</button>
+            <ul>
+                <li>
+                    <a href="home.html">Become a seller</a>
+                </li>
+
+                <li>
+                    <a href="about.html">More</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Cart</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="section">
+                <div class="sectionIn">
+                    <div class="grocery">
+                        <img src="img/grocery.webp" alt="" height="70px">
+                        <p> Grocery</p>
+                    </div>
+                    <div class="mobiles">
+                        <img src="img/mobiles.webp" alt="" height="70px">
+                        <p> Mobiles</p>
+                    </div>
+
+                    <div class="fashion">
+                        <img src="img/fashion.webp" alt="" height="70px">
+                        <p>Fashion</p>
+                    </div>
+                    <div class="electronics">
+                        <img src="img/electronics.webp" alt="" height="70px">
+                        <p>Electronics</p>
+                    </div>
+                    <div class="home">
+                        <img src="img/home.webp" alt="" height="70px">
+                        <p>Home</p>
+                    </div>
+                    <div class="appliances">
+                        <img src="img/appliances.webp" alt="" height="70px">
+                        <p>Appliances</p>
+                    </div>
+                    <div class="travel">
+                        <img src="img/travel.webp" alt="" height="70px">
+                        <p>Travel</p>
+                    </div>
+                    <div class="to"> <img src="img/topoffers.webp" alt="" height="70px">
+                        <p> Top Offers</p>
+                    </div>
+                    <div class="btm">
+                        <img src="img/btm.webp" alt="" height="70px">
+                        <p> Beauty, Toys more</p>
+                    </div>
+                    <div class="vehicles"> <img src="img/vehicle.webp" alt="" height="70px">
+                        <p> Vehicles</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider">
+                <div class="larrow">
+                    <img src="img/larrow.png" alt="" height="30px">
+                </div>
+                <div class="rarrow">
+                    <img src="img/larrow.png" alt="" height="30px">
+                </div>
+            </div>
+
+            <div class="itemlist1">
+                <div class="heading1">
+
+                </div>
+                <div class="cardlist">
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/camera.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Top Mirrorless cameras</h4>
+                            <p class="price">Shop Now!</p>
+                            <p class="brand">Canon,Sony</p>
+                        </div>
+
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/printer.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Printers</h4>
+                            <p class="price">From Rs.3999</p>
+                            <p class="brand">HP</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/trimmer.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Best of Shavers</h4>
+                            <p class="price">From Rs.1649</p>
+                            <p class="brand">Phillips& Havells</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/monitor.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Monitors</h4>
+                            <p class="price">From Rs.6599</p>
+                            <p class="brand">Acer</p>
+                        </div>
+
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/powerbank.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Premium Powerbanks</h4>
+                            <p class="price">Shop Now</p>
+                            <p class="brand">Mi, realme & more</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/projector.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Projectors</h4>
+                            <p class="price">From Rs.9999</p>
+                            <p class="brand">Zebronics</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="itemlist2">
+                <div class="heading2"></div>
+                <div class="cardlist">
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/cycle.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Geared Cycles</h4>
+                            <p class="price">From Rs.3999</p>
+                            <p class="brand">Leader, Cradiac & More</p>
+                        </div>
+
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/dryfruits.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Dry Fruits</h4>
+                            <p class="price">Upto 75% Off</p>
+                            <p class="brand">Happilo, Farmely & More</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/tyres.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Tyres</h4>
+                            <p class="price">From Rs.799</p>
+                            <p class="brand">Apollo, Bridgestone</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/microphones.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">microphones</h4>
+                            <p class="price">Upto 70% Off</p>
+                            <p class="brand">Explore Now</p>
+                        </div>
+
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/gym.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Gym Essentials</h4>
+                            <p class="price">From Rs.139</p>
+                            <p class="brand">Shop Now</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/projector.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Projectors</h4>
+                            <p class="price">From Rs.9999</p>
+                            <p class="brand">Zebronics</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="itemlist3">
+                <div class="heading3"></div>
+                <div class="cardlist">
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/camera.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Top Mirrorless cameras</h4>
+                            <p class="price">Shop Now!</p>
+                            <p class="brand">Canon,Sony</p>
+                        </div>
+
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/printer.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Printers</h4>
+                            <p class="price">From Rs.3999</p>
+                            <p class="brand">HP</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/trimmer.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Best of Shavers</h4>
+                            <p class="price">From Rs.1649</p>
+                            <p class="brand">Phillips& Havells</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/monitor.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Monitors</h4>
+                            <p class="price">From Rs.6599</p>
+                            <p class="brand">Acer</p>
+                        </div>
+
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/powerbank.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Premium Powerbanks</h4>
+                            <p class="price">Shop Now</p>
+                            <p class="brand">Mi, realme & more</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="img/card/projector.webp" alt="">
+                        </div>
+                        <div class="description">
+                            <h4 class="name">Projectors</h4>
+                            <p class="price">From Rs.9999</p>
+                            <p class="brand">Zebronics</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="firstpart">
+            <div class="footerheading">
+                <ul>
+                    <li class="h">About</li>
+                    <li>Contact Us</li>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Flipkart Stories</li>
+                    <li>Press</li>
+                    <li>Flipkart Wholesale</li>
+                    <li>Corporate Information</li>
+                </ul>
+            </div>
+            <div class="footerheading">
+
+                <ul>
+                    <li class="h">Help</li>
+                    <li>Payments</li>
+                    <li>Shipping</li>
+                    <li>Cancellation & Returns</li>
+                    <li>FAQ</li>
+                    <li>Report Infringement</li>
+                </ul>
+            </div>
+            <div class="footerheading">
+
+                <ul>
+                    <li class="h">Consumer Policy</li>
+                    <li>Return Policy</li>
+                    <li>Terms Of Use</li>
+                    <li>Security</li>
+                    <li>Privacy</li>
+                    <li>Sitemap</li>
+                    <li>Grievance Redressal</li>
+                    <li>EPR Compilation</li>
+                </ul>
+            </div>
+            <div class="footerheading">
+
+                <ul>
+                    <li class="h">Social</li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+            <div class="vline"></div>
+            <div class="footerheading2">
+                <p class="fheading">
+                    Mail Us
+                </p>
+                <p class="content">
+                    Flipkart Internet Private Limited,
+
+                    Buildings Alyssa, Begonia &
+
+                    Clove Embassy Tech Village,
+
+                    Outer Ring Road, Devarabeesanahalli Village,
+
+                    Bengaluru, 560103,
+
+                    Karnataka, India
+                </p>
+            </div>
+            <div class="footerheading2">
+                <p class="fheading">
+                    Registered Office
+                </p>
+                <p class="content">
+                    Flipkart Internet Private Limited,
+
+                    Buildings Alyssa, Begonia &
+
+                    Clove Embassy Tech Village,
+
+                    Outer Ring Road, Devarabeesanahalli Village,
+
+                    Bengaluru, 560103,
+
+                    Karnataka, India
+
+                    CIN : U51109KA2012PTC066107
+
+                    Telephone: 044-45614700
+                </p>
+            </div>
+        </div>
+        <div class="secondpart">
+            <div class="line"></div>
+        </div>
+    </footer>
+</body>
+
+</html>
